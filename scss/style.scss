@@ -1,0 +1,123 @@
+@import "base/variables";
+@import "libs/reset";
+
+/* @import url("https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"); */
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.laptop {
+  text-align: center;
+  margin: 2em auto;
+  perspective: 2500px;
+  perspective-origin: 50% 100%;
+  transform-style: preserve-3d;
+}
+
+.laptop__top {
+  max-width: 600px;
+  margin: 0 auto;
+  will-change: transform;
+  transition: transform 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  transform-origin: center bottom;
+}
+
+.laptop__top::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  font-size: 0.5em;
+  background-color: #292929;
+  border-radius: 16px 16px 0 0;
+  z-index: 1;
+}
+
+.laptop__top-img {
+  position: relative;
+  z-index: 2;
+}
+
+.laptop__bottom {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.laptop__top-img,
+.laptop__bottom-img {
+  display: block;
+  margin: 0 auto;
+}
+
+.laptop__top--active {
+  transform: rotateX(-100.5deg) rotateY(0deg);
+}
+
+.laptop__top--active .laptop__top-img {
+  opacity: 0;
+}
+
+20%{
+  transform:
+translateY(22px)
+perspective(0)
+scaleX(1)
+rotatex(340deg);
+}
+30%{
+  transform:
+translateY(47px)
+perspective(0)
+scaleX(1)
+rotatex(330deg);
+}
+
+
+40%{
+  transform:
+translateY(51px)
+perspective(400px)
+scaleX(1.15)
+
+rotatex(320deg);
+}
+
+60%{
+  transform:
+translateY(79px)
+perspective(1200px)
+scaleX(1.14)
+
+rotatex(300deg);
+}
+70%{
+  transform:
+translateY(155px)
+perspective(1200px)
+scaleX(1.21)
+
+rotatex(290deg);
+}
+80%{
+  transform:
+translateY(262px)
+perspective(800px)
+scaleX(1.4)
+
+rotatex(280deg);
+}
+90%{
+  transform:
+translateY(300px)
+perspective(5000px)
+scaleX(1.07)
+
+rotatex(270deg);
+}
