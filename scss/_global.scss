@@ -18,7 +18,35 @@ body {
     padding: 0 40px;
     max-width: 1264px;
 }
-
+//
+.js {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: red;
+    z-index: 5;
+}
+#line {
+    color: $bl;
+}
+#speed {
+    color: $bl;
+}
+#pole {
+    width: 500px;
+    height: 50px;
+    position: relative;
+    background-color: blue;
+}
+#pole-2 {
+    position: absolute;
+    width: 10px;
+    height: 50px;
+    background-color: red;
+    left: 200px;
+    top: 0;
+}
+//
 .fact {
     padding: 156px 0;
 
