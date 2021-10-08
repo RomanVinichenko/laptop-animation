@@ -1,0 +1,42 @@
+.touch {
+    padding: 333px 0 265px;
+    background-color: $bl;
+
+    &__pretitle {
+        font-size: 24px;
+        line-height: 36px;
+        text-align: center;
+        color: $black-gray;
+
+        @extend %jeko-500;
+    }
+
+    &__title {
+        margin-bottom: 45px;
+        font-size: 80px;
+        line-height: 96px;
+        letter-spacing: -0.03em;
+        text-align: center;
+    }
+
+    &__title--color {
+        display: block;
+        -webkit-text-fill-color: transparent;
+        background-image: url("../images/grad.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-clip: text;
+    }
+
+    &__mail {
+        display: block;
+        margin: 0 auto;
+        width: 188px;
+        border-bottom: 1px solid $wh;
+        font-size: 24px;
+        line-height: 18px;
+        text-align: center;
+
+        @extend %jeko-600;
+    }
+}

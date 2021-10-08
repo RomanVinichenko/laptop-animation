@@ -1,0 +1,60 @@
+.windows {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 100px 0;
+
+    .window {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 314px 32px 32px;
+        width: 100%;
+        max-width: 372px;
+        border: 1px solid $black-dark;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-color: $dark;
+
+        &__title {
+            display: block;
+            font-size: 18px;
+            line-height: 18px;
+
+            @extend %jeko-700;
+        }
+
+        &__position {
+            font-size: 12px;
+            line-height: 16px;
+            color: $gray;
+        }
+
+        &__inner {
+            height: 36px;
+        }
+
+        &__time {
+            font-size: 18px;
+            line-height: 20px;
+
+            @extend %jeko-700;
+        }
+
+        @include r($lg) {
+            padding: 254px 26px 22px;
+            max-width: 295px;
+        }
+
+        @include r($md) {
+            &:not(:last-child) {
+                margin-bottom: 16px;
+            }
+        }
+    }
+
+    @include r($lg) {
+        padding: 50px 0;
+    }
+}
