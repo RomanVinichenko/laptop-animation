@@ -1,0 +1,51 @@
+.windows {
+  display: flex;
+  padding: 100px 0;
+  flex-wrap: wrap;
+  justify-content: center;
+  @include r($lg) {
+    padding: 50px 0;
+  }
+
+  .window {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $dark;
+    border: 1px solid $black-dark;
+    max-width: 372px;
+    width: 100%;
+    padding: 314px 32px 32px;
+    @include r($lg) {
+      max-width: 295px;
+      padding: 254px 26px 22px;
+    }
+    @include r($md) {
+      &:not(:last-child) {
+        margin-bottom: 16px;
+      }
+    }
+    &__title {
+      @extend %jeko-700;
+      font-size: 18px;
+      line-height: 18px;
+      display: block;
+    }
+    &__position {
+      font-size: 12px;
+      line-height: 16px;
+      color: $gray;
+    }
+    &__inner {
+      height: 36px;
+    }
+    &__time {
+      @extend %jeko-700;
+      font-size: 18px;
+      line-height: 20px;
+    }
+  }
+}

@@ -1,0 +1,29 @@
+.design {
+  padding: 256px 0;
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__title {
+    @extend %jeko-700;
+
+    font-size: 42px;
+    line-height: 56px;
+
+    color:$bl;
+    max-width: 350px;
+  }
+  &__text-block {
+    max-width: 576px;
+  }
+  &__text {
+    @extend %jeko-500;
+    font-size: 18px;
+    line-height: 28px;
+    letter-spacing: -0.02em;
+    color: #6B7188;
+    &:not(:last-child){
+      margin-bottom: 20px;
+    }
+  }
+}
