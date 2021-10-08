@@ -1,29 +1,34 @@
 .design {
-  padding: 256px 0;
-  &__wrapper {
-    display: flex;
-    justify-content: space-between;
-  }
-  &__title {
-    @extend %jeko-700;
+    padding: 256px 0;
 
-    font-size: 42px;
-    line-height: 56px;
-
-    color:$bl;
-    max-width: 350px;
-  }
-  &__text-block {
-    max-width: 576px;
-  }
-  &__text {
-    @extend %jeko-500;
-    font-size: 18px;
-    line-height: 28px;
-    letter-spacing: -0.02em;
-    color: #6B7188;
-    &:not(:last-child){
-      margin-bottom: 20px;
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
     }
-  }
+
+    &__title {
+        max-width: 350px;
+        font-size: 42px;
+        line-height: 56px;
+        color: $bl;
+
+        @extend %jeko-700;
+    }
+
+    &__text-block {
+        max-width: 576px;
+    }
+
+    &__text {
+        font-size: 18px;
+        line-height: 28px;
+        letter-spacing: -0.02em;
+        color: #6b7188;
+
+        &:not(:last-child) {
+            margin-bottom: 20px;
+        }
+
+        @extend %jeko-500;
+    }
 }

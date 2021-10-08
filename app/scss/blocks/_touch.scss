@@ -1,38 +1,42 @@
 .touch {
-  background-color: $bl;
-  padding: 333px 0 265px;
-  &__pretitle {
-    @extend %jeko-500;
-    font-size: 24px;
-    line-height: 36px;
-    text-align: center;
-    color: $black-gray;
-  }
-  &__title {
-    font-size: 80px;
-    line-height: 96px;
-    text-align: center;
-    letter-spacing: -0.03em;
-    margin-bottom: 45px;
-  }
+    padding: 333px 0 265px;
+    background-color: $bl;
 
-  &__title--color{
-    display: block;
-    background-image: url("../images/grad.png");
-    background-repeat: no-repeat;
-    background-position: center;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
+    &__pretitle {
+        font-size: 24px;
+        line-height: 36px;
+        text-align: center;
+        color: $black-gray;
 
-  &__mail {
-    display: block;
-    @extend %jeko-600;
-    margin: 0 auto;
-    width: 188px;
-    font-size: 24px;
-    line-height: 18px;
-    text-align: center;
-    border-bottom: 1px solid $wh;
-  }
+        @extend %jeko-500;
+    }
+
+    &__title {
+        margin-bottom: 45px;
+        font-size: 80px;
+        line-height: 96px;
+        letter-spacing: -0.03em;
+        text-align: center;
+    }
+
+    &__title--color {
+        display: block;
+        -webkit-text-fill-color: transparent;
+        background-image: url("../images/grad.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-clip: text;
+    }
+
+    &__mail {
+        display: block;
+        margin: 0 auto;
+        width: 188px;
+        border-bottom: 1px solid $wh;
+        font-size: 24px;
+        line-height: 18px;
+        text-align: center;
+
+        @extend %jeko-600;
+    }
 }
