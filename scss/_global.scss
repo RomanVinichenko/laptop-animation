@@ -18,6 +18,13 @@ body {
     padding: 0 40px;
     max-width: 1264px;
 }
+
+.link {
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: #0f0f0f;
+}
 //
 .js {
     position: fixed;
@@ -75,3 +82,4 @@ body {
         padding: 50px 0 100px;
     }
 }
+
