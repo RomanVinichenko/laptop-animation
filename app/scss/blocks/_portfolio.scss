@@ -8,7 +8,29 @@
         line-height: 64px;
         color: $bl;
 
+        @include r($xxl) {
+            font-size: 45px;
+            line-height: 54px;
+        }
+
+        @include r($lg) {
+            margin-bottom: 114px;
+            max-width: 500px;
+            font-size: 40px;
+            line-height: 48px;
+        }
+
+        @include r($lg) {
+            max-width: 500px;
+            font-size: 32px;
+            line-height: 40px;
+        }
+
         @extend %jeko-800;
+    }
+
+    @include r($lg) {
+        padding: 126px 0;
     }
 }
 
@@ -31,13 +53,37 @@
             @extend %jeko-700;
         }
 
+        @include r($md) {
+            font-size: 16px;
+        }
+
+        @include r($sm) {
+            font-size: 12px;
+        }
+
         @extend %jeko-500;
     }
 
     &__item {
         &:not(:last-child) {
             margin-right: 68px;
+
+            @include r($lg) {
+                margin-right: 45px;
+            }
+
+            @include r($md) {
+                margin-right: 30px;
+            }
+
+            @include r($sm) {
+                margin-right: 10px;
+            }
         }
+    }
+
+    @include r($lg) {
+        padding-bottom: 20px;
     }
 }
 
@@ -49,6 +95,16 @@
         flex-wrap: wrap;
         justify-content: space-between;
         padding: 100px 0;
+
+        @include r($xl) {
+            padding: 80px 0;
+        }
+
+        @include r($md) {
+            flex-direction: column;
+            align-items: center;
+            padding: 40px 0;
+        }
     }
 
     &__img {
@@ -75,9 +131,37 @@
 
     &--top {
         margin-top: 200px;
+
+        @include r($xl) {
+            margin-top: 81px;
+        }
+
+        @include r($md) {
+            margin: 40px 0;
+        }
     }
 
     &--bottom {
         margin-bottom: 200px;
+
+        @include r($xl) {
+            margin-bottom: 81px;
+        }
+
+        @include r($md) {
+            margin: 40px 0;
+        }
+    }
+
+    @include r($xxl) {
+        max-width: 430px;
+    }
+
+    @include r($lg) {
+        max-width: 310px;
+    }
+
+    @include r($md) {
+        max-width: 400px;
     }
 }
