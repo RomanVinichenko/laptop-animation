@@ -19,40 +19,50 @@ body {
     max-width: 1264px;
 }
 
-.link {
+.links {
+    display: flex;
     position: absolute;
-    top: 0;
     right: 0;
+    top: 5px;
+}
+.link {
+
     color: #0f0f0f;
 }
+
 //
 .js {
     position: fixed;
-    top: 0;
     left: 0;
-    background-color: red;
+    top: 0;
     z-index: 5;
+    background-color: red;
 }
+
 #line {
     color: $bl;
 }
+
 #speed {
     color: $bl;
 }
+
 #pole {
+    position: relative;
     width: 500px;
     height: 50px;
-    position: relative;
     background-color: blue;
 }
+
 #pole-2 {
     position: absolute;
+    left: 200px;
+    top: 0;
     width: 10px;
     height: 50px;
     background-color: red;
-    left: 200px;
-    top: 0;
 }
+
 //
 .fact {
     padding: 156px 0;
@@ -82,4 +92,3 @@ body {
         padding: 50px 0 100px;
     }
 }
-
