@@ -1,0 +1,83 @@
+.portfolio {
+    padding: 156px 0;
+
+    &__title {
+        margin-bottom: 156px;
+        max-width: 688px;
+        font-size: 56px;
+        line-height: 64px;
+        color: $bl;
+
+        @extend %jeko-800;
+    }
+}
+
+.category {
+    display: flex;
+    padding-bottom: 36px;
+    border-bottom: 1px solid #6b7188;
+
+    &__link {
+        font-size: 20px;
+        line-height: 32px;
+        color: #6b7188;
+        transition: all 0.3s;
+
+        &:hover {
+            font-size: 20px;
+            line-height: 32px;
+            color: $bl;
+
+            @extend %jeko-700;
+        }
+
+        @extend %jeko-500;
+    }
+
+    &__item {
+        &:not(:last-child) {
+            margin-right: 68px;
+        }
+    }
+}
+
+.article {
+    max-width: 576px;
+
+    &__wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 100px 0;
+    }
+
+    &__img {
+        margin-bottom: 28px;
+    }
+
+    &__title {
+        margin-bottom: 8px;
+        max-width: 357px;
+        font-size: 24px;
+        line-height: 32px;
+        color: $bl;
+
+        @extend %jeko-800;
+    }
+
+    &__type {
+        font-size: 14px;
+        line-height: 20px;
+        color: #6b7188;
+
+        @extend %jeko-500;
+    }
+
+    &--top {
+        margin-top: 200px;
+    }
+
+    &--bottom {
+        margin-bottom: 200px;
+    }
+}

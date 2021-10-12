@@ -1,190 +1,225 @@
 .contact {
-  background-color: $bl;
-  &__inner {
-    display: flex;
-    justify-content: space-between;
-    min-height: 100vh;
-    padding: 150px 0 165px;
-    @include r($lg) {
-      padding: 80px 0 60px;
-    }
-    @include r($md) {
-      flex-direction: column;
-    }
-
-  }
-  &__info {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    max-width: 550px;
-  }
-  &__title {
-    @extend %jeko-700;
-    font-size: 56px;
-    line-height: 64px;
-    margin-bottom: 64px;
-    @include r($md) {
-      font-size: 32px;
-      line-height: 40px;
-      margin-bottom: 32px;
-    }
-  }
-  &__title--color {
-    display: block;
-    max-width: 287px;
-    -webkit-text-fill-color: transparent;
-    background-image: url("../images/grad-1.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-
-    background-clip: text;
-    @include r($md) {
-      max-width: 160px;
-      background-position: center;
-    }
-  }
-  &__mail {
-    @extend %jeko-600;
-    font-size: 18px;
-    color: #F6F6F6;
-    margin-bottom: auto;
-    @include r($md) {
-      color: #A0A0A0;
-      margin-bottom: 64px;
-    }
-  }
-
-  &__list {
-    display: flex;
-    @include r($md) {
-      display: none;
-    }
-  }
-  &__link {
-    @extend %jeko-600;
-    font-size: 14px;
-    line-height: 20px;
-    color: #F6F6F6;
-  }
-  &__item {
-    &:not(:last-child){
-      margin-right: 36px;
-      @include r($xl) {
-        margin-right: 25px;
-      }
-    }
-  }
-  &__form {
-    max-width: 615px;
-    width: 100%;
-    @include r($xl) {
-      margin-left: 20px;
-    }
-    @include r($md) {
-      margin: 0;
-    }
-  }
-
-  &__label {
-    @extend %jeko-800;
-    display: block;
-    font-size: 12px;
-    line-height: 16px;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    margin-bottom: 24px;
-  }
-  &__types,
-  &__budgets {
-    margin-bottom: 40px;
-    @include r($xl) {
-      margin-bottom: 16px;
-    }
-  }
-  &__type,
-  &__budget {
-    @extend %jeko-500;
-    padding: 8px 22px;
-    letter-spacing: -0.03em;
-    border: 1px solid #A0A0A0;
-    border-radius: 32px;
     background-color: $bl;
-    color: $wh;
-    cursor: pointer;
-    &:not(:last-child) {
-      margin-right: 14px;
-      @include r($md) {
-        margin-right: 2px;
-      }
-    }
-    @include r($xl) {
-      margin-bottom: 16px;
-    }
-    @include r($md) {
-      font-size: 14px;
-      line-height: 20px;
-      color: #A0A0A0;
-      padding: 8px 20px;
-    }
-  }
-  &__type--active{
-    background-image: url("../images/grad.png");
-    background-position: top center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    border: 1px solid transparent;
-    color: $wh;
-  }
-  &__input {
-    background-color: transparent;
-    border: none;
-    max-width: 272px;
-    margin-bottom: 40px;
-    @extend %jeko-500;
-    letter-spacing: -0.03em;
-    color: #A0A0A0;
-    padding-bottom: 20px;
 
-    &::placeholder {
-      color: #A0A0A0;
-    }
-    &:not(:last-child) {
-      margin-right: 33px;
-    }
-    @include r($xl) {
-      margin-bottom: 32px;
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        padding: 150px 0 165px;
+        min-height: 100vh;
 
-    }
-    @include r($md) {
-      border-bottom: 1px solid #A0A0A0;
-    }
-    @include r($sm) {
-      max-width: 100%;
-      width: 100%;
-    }
-  }
-  &__submit {
-    @extend %jeko-700;
-    font-size: 20px;
-    line-height: 32px;
-    color: $wh;
-    cursor: pointer;
-    padding-right: 52px;
-    border: none;
-    background-color: transparent;
-    position: relative;
-    &::after {
-      position: absolute;
-      content: "";
-      background-image: url("../images/arrow.svg");
-      top: 50%;
-      transform: translateY(-50%);
-      right: 0;
-      width: 24px;
-      height: 17px;
-    }
-  }
+        @include r($lg) {
+            padding: 80px 0 60px;
+        }
 
+        @include r($md) {
+            flex-direction: column;
+        }
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        max-width: 550px;
+    }
+
+    &__title {
+        margin-bottom: 64px;
+        font-size: 56px;
+        line-height: 64px;
+
+        @include r($md) {
+            margin-bottom: 32px;
+            font-size: 32px;
+            line-height: 40px;
+        }
+
+        @extend %jeko-700;
+    }
+
+    &__title--color {
+        display: block;
+        max-width: 287px;
+        -webkit-text-fill-color: transparent;
+        background-image: url("../images/grad-1.png");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-clip: text;
+
+        @include r($md) {
+            max-width: 160px;
+            background-position: center;
+        }
+    }
+
+    &__mail {
+        margin-bottom: auto;
+        font-size: 18px;
+        color: #f6f6f6;
+
+        @include r($md) {
+            margin-bottom: 64px;
+            color: #a0a0a0;
+        }
+
+        @extend %jeko-600;
+    }
+
+    &__list {
+        display: flex;
+
+        @include r($md) {
+            display: none;
+        }
+    }
+
+    &__link {
+        font-size: 14px;
+        line-height: 20px;
+        color: #f6f6f6;
+
+        @extend %jeko-600;
+    }
+
+    &__item {
+        &:not(:last-child) {
+            margin-right: 36px;
+
+            @include r($xl) {
+                margin-right: 25px;
+            }
+        }
+    }
+
+    &__form {
+        width: 100%;
+        max-width: 615px;
+
+        @include r($xl) {
+            margin-left: 20px;
+        }
+
+        @include r($md) {
+            margin: 0;
+        }
+    }
+
+    &__label {
+        display: block;
+        margin-bottom: 24px;
+        font-size: 12px;
+        line-height: 16px;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+
+        @extend %jeko-800;
+    }
+
+    &__type--active {
+        border: 1px solid transparent;
+        color: $wh;
+        background-image: url("../images/grad.png");
+        background-position: top center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    &__input {
+        margin-bottom: 40px;
+        padding-bottom: 20px;
+        max-width: 272px;
+        border: none;
+        letter-spacing: -0.03em;
+        color: #a0a0a0;
+        background-color: transparent;
+
+        &::placeholder {
+            color: #a0a0a0;
+        }
+
+        &:not(:last-child) {
+            margin-right: 33px;
+        }
+
+        @include r($xl) {
+            margin-bottom: 32px;
+        }
+
+        @include r($md) {
+            border-bottom: 1px solid #a0a0a0;
+        }
+
+        @include r($sm) {
+            width: 100%;
+            max-width: 100%;
+        }
+
+        @extend %jeko-500;
+    }
+
+    &__submit {
+        position: relative;
+        padding-right: 52px;
+        border: none;
+        font-size: 20px;
+        line-height: 32px;
+        color: $wh;
+        background-color: transparent;
+        cursor: pointer;
+
+        &::after {
+            content: "";
+            position: absolute;
+            right: 0;
+            top: 50%;
+            width: 24px;
+            height: 17px;
+            background-image: url("../images/arrow.svg");
+            transform: translateY(-50%);
+        }
+
+        @extend %jeko-700;
+    }
+
+    &__types,
+    &__budgets {
+        margin-bottom: 40px;
+
+        @include r($xl) {
+            margin-bottom: 16px;
+        }
+    }
+
+    &__type,
+    &__budget {
+        padding: 8px 22px;
+        border: 1px solid #a0a0a0;
+        border-radius: 32px;
+        letter-spacing: -0.03em;
+        color: $wh;
+        background-color: $bl;
+        cursor: pointer;
+
+        &:not(:last-child) {
+            margin-right: 14px;
+
+            @include r($md) {
+                margin-right: 2px;
+            }
+        }
+
+        @include r($xl) {
+            margin-bottom: 16px;
+        }
+
+        @include r($md) {
+            padding: 8px 20px;
+            font-size: 14px;
+            line-height: 20px;
+            color: #a0a0a0;
+        }
+
+        @extend %jeko-500;
+    }
 }
