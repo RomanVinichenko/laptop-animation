@@ -10,6 +10,17 @@
         text-align: center;
         color: #6b7188;
 
+        @include r($xl) {
+            margin-bottom: 12px;
+            font-size: 20px;
+            line-height: 30px;
+        }
+
+        @include r($lg) {
+            font-size: 16px;
+            line-height: 20px;
+        }
+
         @extend %jeko-500;
     }
 
@@ -22,6 +33,24 @@
         text-align: center;
         color: $bl;
 
+        @include r($xl) {
+            margin: 0 auto 36px;
+            font-size: 70px;
+            line-height: 65px;
+        }
+
+        @include r($lg) {
+            max-width: 500px;
+            font-size: 50px;
+            line-height: 55px;
+        }
+
+        @include r($md) {
+            max-width: 317px;
+            font-size: 36px;
+            line-height: 42px;
+        }
+
         @extend %jeko-700;
     }
 
@@ -31,6 +60,11 @@
         line-height: 36px;
         text-align: center;
         color: #0f0f0f;
+
+        @include r($lg) {
+            font-size: 18px;
+            line-height: 26px;
+        }
 
         @extend %jeko-600;
     }
