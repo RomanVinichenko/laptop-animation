@@ -19,10 +19,14 @@ body {
     max-width: 1264px;
 }
 
-.link {
+.links {
+    display: flex;
     position: absolute;
     right: 0;
-    top: 0;
+    top: 5px;
+}
+.link {
+
     color: #0f0f0f;
 }
 
