@@ -40,10 +40,13 @@
     border-bottom: 1px solid #6b7188;
 
     &__link {
+        border: none;
         font-size: 20px;
         line-height: 32px;
         color: #6b7188;
+        background-color: transparent;
         transition: all 0.3s;
+        cursor: pointer;
 
         &:hover {
             font-size: 20px;
