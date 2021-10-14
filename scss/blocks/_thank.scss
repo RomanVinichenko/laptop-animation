@@ -1,0 +1,77 @@
+.thank {
+    padding: 36px 0 80px;
+    height: 100vh;
+    background-color: $bl;
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+
+        @include r($xl) {
+            padding-top: 100px;
+        }
+
+        @include r($md) {
+            padding-top: 50px;
+        }
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 90px 0;
+        min-height: 545px;
+        max-width: 505px;
+
+        @include r($lg) {
+            max-width: 400px;
+        }
+    }
+
+    &__title {
+        margin-bottom: 25px;
+        font-size: 56px;
+        line-height: 64px;
+
+        @include r($lg) {
+            margin-bottom: 15px;
+            font-size: 32px;
+            line-height: 40px;
+        }
+
+        @extend %jeko-700;
+    }
+
+    &__message {
+        display: block;
+        margin-bottom: auto;
+        font-size: 18px;
+        color: $black-gray;
+
+        @include r($lg) {
+            font-size: 16px;
+            line-height: 20px;
+        }
+
+        @extend %jeko-600;
+    }
+
+    &__picture {
+        @include r($md) {
+            display: none;
+        }
+    }
+
+    &__img {
+        object-fit: cover;
+
+        @include r($xl) {
+            max-width: 400px;
+        }
+    }
+
+    @include r($xl) {
+        padding: 30px 0;
+    }
+}

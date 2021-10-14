@@ -1,0 +1,48 @@
+.error {
+    padding: 233px 0 336px;
+    height: 100vh;
+    background-color: $bl;
+
+    &__wrapper {
+        max-width: 528px;
+    }
+
+    &__title {
+        margin-bottom: 40px;
+        font-size: 56px;
+        line-height: 64px;
+
+        @include r($lg) {
+            font-size: 45px;
+            line-height: 56px;
+        }
+
+        @include r($md) {
+            margin-bottom: 48px;
+            font-size: 32px;
+            line-height: 40px;
+        }
+
+        @extend %jeko-700;
+    }
+
+    &__button {
+        position: relative;
+        padding-right: 40px;
+        font-size: 20px;
+        line-height: 32px;
+
+        &::after {
+            content: "";
+            position: absolute;
+            right: 0;
+            top: 50%;
+            width: 24px;
+            height: 16px;
+            background-image: url("../images/arrow.svg");
+            transform: translateY(-50%);
+        }
+
+        @extend %jeko-700;
+    }
+}

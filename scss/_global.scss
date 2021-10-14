@@ -20,49 +20,66 @@ body {
 }
 
 .links {
-    position: absolute;
-    right: 0;
-    top: 5px;
-    z-index: 2;
-    display: flex;
-}
+    z-index: 5;
 
-.link {
-    color: #0f0f0f;
+    &__button {
+        position: absolute;
+        right: 30px;
+        top: 0;
+        height: 20px;
+        cursor: pointer;
+    }
+
+    &__link {
+        display: block;
+    }
+
+    &__list {
+        position: absolute;
+        right: 30px;
+        top: 20px;
+        z-index: 5;
+        display: none;
+        background-color: $bl;
+    }
+
+    &__list--active {
+        display: block;
+    }
 }
 
 //
-.js {
-    position: fixed;
-    left: 0;
-    top: 0;
-    z-index: 5;
-    background-color: red;
-}
-
-#line {
-    color: $bl;
-}
-
-#speed {
-    color: $bl;
-}
-
-#pole {
-    position: relative;
-    width: 500px;
-    height: 50px;
-    background-color: blue;
-}
-
-#pole-2 {
-    position: absolute;
-    left: 200px;
-    top: 0;
-    width: 10px;
-    height: 50px;
-    background-color: red;
-}
+//.js {
+//    position: fixed;
+//    left: 0;
+//    top: 0;
+//    z-index: 5;
+//    background-color: red;
+//}
+//
+//#line {
+//    color: $bl;
+//}
+//
+//#speed {
+//    color: $bl;
+//}
+//
+//#pole {
+//    position: relative;
+//    width: 500px;
+//    height: 50px;
+//    background-color: blue;
+//}
+//
+//#pole-2 {
+//    position: absolute;
+//    left: 200px;
+//    top: 0;
+//    width: 10px;
+//    height: 50px;
+//    background-color: red;
+//}
 
 //
 .fact {

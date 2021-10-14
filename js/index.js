@@ -29,6 +29,9 @@ $(function () {
     $('.contact__budget--fifty').on('click', function () {
         $('.contact__budget--fifty').toggleClass('contact__type--active');
     });
+    $('.links__button').on('click', function () {
+        $('.links__list').toggleClass('links__list--active');
+    });
 });
 // $('.article__wrapper').mixItUp();
 
