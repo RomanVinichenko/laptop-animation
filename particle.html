@@ -1,41 +1,112 @@
 <!DOCTYPE html>
 <html lang="en-US">
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <title>Contact</title>
-    <link rel="stylesheet" href="css/style.min.css" />
-</head>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width" />
+        <title>Contact</title>
+        <link rel="stylesheet" href="css/style.min.css" />
+    </head>
 
-<body>
+    <body>
+        <header class="header"></header>
+        <main class="main">
+            <section class="particle">
+                <div class="container">
+                    <div class="particle__top">
+                        <span class="particle__date">14.09.2021</span>
+                        <h1 class="particle__title">What is User Interface Design?</h1>
+                        <img class="particle__img" src="images/particle-top.jpg" alt="title img" />
+                    </div>
+                </div>
+            </section>
+            <section class="particle-content">
+                <div class="container--small">
+                    <p class="particle-content__meaning">
+                        User interface (UI) design is the process designers use to build interfaces
+                        in software or computerized devices, focusing on looks or style. Designers
+                        aim to create interfaces which users find easy to use and pleasurable. UI
+                        design refers to graphical user interfaces and other forms—e.g.,
+                        voice-controlled interfaces.
+                    </p>
+                    <h1 class="particle-content__title">Designing User Interfaces for Users</h1>
+                    <p class="particle-content__text">
+                        Often confused with UX design, UI design is more concerned with the surface
+                        and overall feel of a design. UI design is a craft where you the designer
+                        build an essential part of the user experience. UX design covers the entire
+                        spectrum of the user experience. One analogy is to picture UX design as a
+                        car with UI design as the driving console.
+                    </p>
+                    <p class="particle-content__text particle-content__text--accent">
+                        User Interface (UI) Design focuses on anticipating what users might need to
+                        do and ensuring that the interface has elements that are easy to access,
+                        understand, and use to facilitate those actions. UI brings together concepts
+                        from interaction design, visual design, and information architecture.
+                    </p>
+                    <h2 class="particle-content__subtitle">Choosing Interface Elements</h2>
+                    <p class="particle-content__text">
+                        Users have become familiar with interface elements acting in a certain way,
+                        so try to be consistent and predictable in your choices and their layout.
+                        Doing so will help with task completion, efficiency, and satisfaction.
+                    </p>
+                    <p class="particle-content__text">
+                        Interface elements include but are not limited to:
+                    </p>
+                    <ul class="particle-content__list">
+                        <li class="particle-content__item-text">
+                            Input Controls: buttons, text fields, checkboxes, radio buttons,
+                            dropdown lists, list boxes, toggles, date field.
+                        </li>
 
-<header class="header">
-</header>
-<main class="main">
-    <section class="particle">
-        <div class="container">
-            <div class="particle__top">
-                <span class="particle__date">14.09.2021</span>
-                <h1 class="particle__title">What is User Interface Design?</h1>
-                <img class="particle__img" src="images/particle-top.jpg" alt="title img">
+                        <li class="particle-content__item-text">
+                            Navigational Components: breadcrumb, slider, search field, pagination,
+                            slider, tags, icons
+                        </li>
+                        <li class="particle-content__item-text">
+                            Informational Components: tooltips, icons, progress bar, notifications,
+                            message boxes, modal windows
+                        </li>
+                        <li class="particle-content__item-text">Containers: accordion</li>
+                    </ul>
+                    <p class="particle-content__text">
+                        There are times when multiple elements might be appropriate for displaying
+                        content. When this happens, it’s important to consider the trade-offs. For
+                        example, sometimes elements that can help save you space, put more of a
+                        burden on the user mentally by forcing them to guess what is within the
+                        dropdown or what the element might be.
+                    </p>
+                </div>
+            </section>
+            <div class="container">
+                <ul class="news__list news__list--particle">
+                    <a class="news__next-top--particle" href="#">Next up</a>
+                    <li class="news__item news__item--particle">
+                        <picture class="news__picture">
+                            <img class="news__img" src="images/news-1.jpg" alt="news picture" />
+                        </picture>
+                        <div class="news__content news__content--particle">
+                            <a class="news__next" href="#">Next up</a>
+                            <div class="news__inner">
+                                <h2 class="news__heading particle__news-heading">
+                                    What is User Interface Design?
+                                </h2>
+                                <span class="news__date">14.09.2021</span>
+                            </div>
+                            <a class="news__link news__link--particle" href="#">Read More</a>
+                        </div>
+                    </li>
+                </ul>
             </div>
-        </div>
-    </section>
-    <section class="particle-content">
-        <div class="container">
-            <p class="particle-content__meaning">User interface (UI) design is the process designers use to build interfaces in software or computerized devices, focusing on looks or style. Designers aim to create interfaces which users find easy to use and pleasurable. UI design refers to graphical user interfaces and other forms—e.g., voice-controlled interfaces.</p>
-        <h1 class="particle-content__title">Designing User Interfaces for Users</h1>
-        <p class="particle-content__text">Often confused with UX design, UI design is more concerned with the surface and overall feel of a design. UI design is a craft where you the designer build an essential part of the user experience. UX design covers the entire spectrum of the user experience. One analogy is to picture UX design as a car with UI design as the driving console.
-        </p>
-        </div>
-
-    </section>
-</main>
-<footer class="footer">
-
-</footer>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script src="js/index.min.js"></script>
-</body>
-
+            <section class="touch">
+                <p class="touch__pretitle">Get in touch</p>
+                <h2 class="touch__title">
+                    Let’s do something
+                    <span class="touch__title--color">together</span>
+                </h2>
+                <span class="touch__mail">helloceler@.com</span>
+            </section>
+        </main>
+        <footer class="footer"></footer>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="js/index.min.js"></script>
+    </body>
 </html>
