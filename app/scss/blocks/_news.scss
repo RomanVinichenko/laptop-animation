@@ -1,11 +1,11 @@
 .news {
     padding: 258px 0 295px;
-    color: $bl;
 
     &__title {
         margin-bottom: 150px;
         font-size: 56px;
         line-height: 64px;
+        color: $bl;
 
         @include r($lg) {
             margin-bottom: 40px;
@@ -42,6 +42,7 @@
         font-size: 36px;
         line-height: 52px;
         text-transform: uppercase;
+        color: $bl;
 
         @include r($xl) {
             margin: 0 auto 24px 0;
@@ -51,6 +52,8 @@
             font-size: 24px;
             line-height: 36px;
         }
+
+        @extend %jeko-700;
     }
 
     &__inner {
@@ -78,6 +81,7 @@
 
     &__date {
         font-size: 20px;
+        color: $bl;
 
         @include r($xl) {
             margin: 0 auto 12px 0;
@@ -86,6 +90,8 @@
         @include r($lg) {
             font-size: 16px;
         }
+
+        @extend %jeko-700;
     }
 
     &__picture {
@@ -110,6 +116,7 @@
         display: inline-block;
         margin-bottom: 100px;
         max-width: 100px;
+        color: $bl;
 
         &::after {
             content: "";
@@ -129,6 +136,8 @@
         @include r($md) {
             margin-bottom: 0;
         }
+
+        @extend %jeko-700;
     }
 
     &__nav {
@@ -140,6 +149,8 @@
 
     &__nav-link {
         color: #000;
+
+        @extend %jeko-700;
     }
 
     &__nav-item {
@@ -185,11 +196,69 @@
             background-image: url("../images/diagonal.svg");
             transform: translateY(-50%);
         }
+
+        @extend %jeko-700;
+    }
+
+    &__item--particle {
+        margin-bottom: 0;
+        padding-bottom: 0;
+        border: none;
+    }
+
+    &__content--particle {
+        padding: 20px 0;
+
+        @include r($xl) {
+            padding: 0;
+        }
+    }
+
+    &__link--particle {
+        margin: auto 0 0;
+    }
+
+    &__list--particle {
+        margin-bottom: 230px;
+
+        @include r($xl) {
+            margin-bottom: 120px;
+        }
+    }
+
+    &__next {
+        @include r($lg) {
+            line-height: 25px;
+        }
+
+        @include r($md) {
+            display: none;
+        }
+    }
+
+    &__next-top--particle {
+        display: none;
+        margin-bottom: 28px;
+        line-height: 32px;
+        text-align: center;
+
+        @include r($md) {
+            display: block;
+        }
+    }
+
+    &__next,
+    &__next-top--particle {
+        margin-bottom: 15px;
+        font-size: 20px;
+        line-height: 52px;
+        text-transform: uppercase;
+        color: $bl;
+
+        @extend %jeko-700;
     }
 
     @include r($xl) {
         padding: 100px 0 72px;
     }
-
-    @extend %jeko-700;
 }

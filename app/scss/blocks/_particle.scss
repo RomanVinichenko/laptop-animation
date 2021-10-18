@@ -2,22 +2,47 @@
     background-color: $bl;
 
     &__top {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
         padding-top: 200px;
         max-height: 100vh;
+
+        @include r($lg) {
+            padding-top: 80px;
+        }
     }
 
     &__img {
+        margin-bottom: -160px;
         width: 100%;
         max-width: 1488px;
         max-height: 640px;
         object-fit: cover;
+
+        @include r($xl) {
+            margin-bottom: -120px;
+        }
+
+        @include r($lg) {
+            margin-bottom: -80px;
+        }
+
+        @include r($md) {
+            min-height: 296px;
+        }
     }
 
     &__date {
         display: block;
         margin-bottom: 24px;
-        line-height: 24px;
+        font-size: 20px;
         text-align: center;
+
+        @include r($lg) {
+            margin-bottom: 20px;
+            font-size: 16px;
+        }
     }
 
     &__title {
@@ -25,7 +50,131 @@
         font-size: 56px;
         line-height: 64px;
         text-align: center;
+
+        @include r($xl) {
+            margin-bottom: 100px;
+        }
+
+        @include r($lg) {
+            margin-bottom: 64px;
+            font-size: 50px;
+            line-height: 54px;
+        }
+
+        @include r($md) {
+            font-size: 28px;
+            line-height: 36px;
+        }
     }
 
     @extend %jeko-700;
+}
+
+.particle-content {
+    padding: 315px 0 250px;
+
+    &__meaning {
+        margin-bottom: 128px;
+        padding-left: 32px;
+        max-width: 1184px;
+        border-left: 2px solid $black-gray;
+        font-size: 28px;
+        line-height: 44px;
+        color: #000;
+
+        @include r($xl) {
+            margin-bottom: 97px;
+            font-size: 24px;
+            line-height: 36px;
+        }
+
+        @include r($lg) {
+            padding-left: 16px;
+            font-size: 20px;
+            line-height: 32px;
+        }
+
+        @extend %jeko-700;
+    }
+
+    &__title {
+        margin-bottom: 44px;
+        font-size: 36px;
+        line-height: 44px;
+        color: #000;
+
+        @include r($xl) {
+            margin-bottom: 24px;
+            font-size: 30px;
+            line-height: 38px;
+        }
+
+        @include r($lg) {
+            font-size: 24px;
+            line-height: 32px;
+        }
+
+        @extend %jeko-700;
+    }
+
+    &__text {
+        margin-bottom: 30px;
+        max-width: 880px;
+        font-size: 18px;
+        line-height: 28px;
+        color: #6b7188;
+
+        @include r($lg) {
+            margin-bottom: 25px;
+            font-size: 16px;
+        }
+    }
+
+    &__text--accent {
+        margin-bottom: 60px;
+    }
+
+    &__subtitle {
+        margin-bottom: 36px;
+        font-size: 24px;
+        line-height: 44px;
+        color: #000;
+
+        @include r($lg) {
+            margin-bottom: 20px;
+            font-size: 20px;
+            line-height: 32px;
+        }
+
+        @extend %jeko-700;
+    }
+
+    &__list {
+        margin-bottom: 30px;
+        padding-left: 25px;
+        max-width: 880px;
+        list-style: outside;
+
+        @include r($lg) {
+            margin-bottom: 25px;
+        }
+    }
+
+    &__item-text {
+        font-size: 18px;
+        line-height: 28px;
+        color: #6b7188;
+
+        &:not(:last-child) {
+            margin-bottom: 15px;
+        }
+    }
+
+    @include r($xl) {
+        padding: 250px 0 150px;
+    }
+
+    @include r($lg) {
+        padding: 170px 0 55px;
+    }
 }

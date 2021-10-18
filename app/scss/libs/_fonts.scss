@@ -52,3 +52,14 @@
     font-style: normal;
     font-display: swap;
 }
+
+@font-face {
+    src:
+        local("Jeko-Black"),
+        url("../fonts/Jeko-Black.woff2") format("woff2"),
+        url("../fonts/Jeko-Black.woff") format("woff");
+    font-family: "Jeko-Black";
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
