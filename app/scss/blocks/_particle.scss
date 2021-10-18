@@ -1,0 +1,31 @@
+.particle {
+    background-color: $bl;
+
+    &__top {
+        padding-top: 200px;
+        max-height: 100vh;
+    }
+
+    &__img {
+        width: 100%;
+        max-width: 1488px;
+        max-height: 640px;
+        object-fit: cover;
+    }
+
+    &__date {
+        display: block;
+        margin-bottom: 24px;
+        line-height: 24px;
+        text-align: center;
+    }
+
+    &__title {
+        margin-bottom: 146px;
+        font-size: 56px;
+        line-height: 64px;
+        text-align: center;
+    }
+
+    @extend %jeko-700;
+}
