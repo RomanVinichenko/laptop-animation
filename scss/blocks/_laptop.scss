@@ -45,9 +45,16 @@
     max-width: 600px;
     overflow: hidden;
     transform-origin: center bottom;
-    transition: transform 4s ease;
-    will-change: transform;
+    //transition: transform 4s ease;
+    //will-change: transform;
+    transform: rotateX(-100.5deg);
 }
+.laptop__top--active .laptop__top-img {
+    opacity: 0;
+}
+//.laptop__top--active {
+//    transform: rotateX(-100.5deg) rotateY(0deg);
+//}
 
 .laptop__top::before {
     content: "";
@@ -74,66 +81,58 @@
     margin: 0 auto;
 }
 
-.laptop__top--active {
-    transform: rotateX(-100.5deg) rotateY(0deg);
-}
-
-.laptop__top--active .laptop__top-img {
-    opacity: 0;
-}
-
-20% {
-    transform:
-        translateY(22px)
-        perspective(0)
-        scaleX(1)
-        rotateX(340deg);
-}
-
-30% {
-    transform:
-        translateY(47px)
-        perspective(0)
-        scaleX(1)
-        rotateX(330deg);
-}
-
-40% {
-    transform:
-        translateY(51px)
-        perspective(400px)
-        scaleX(1.15)
-        rotateX(320deg);
-}
-
-60% {
-    transform:
-        translateY(79px)
-        perspective(1200px)
-        scaleX(1.14)
-        rotateX(300deg);
-}
-
-70% {
-    transform:
-        translateY(155px)
-        perspective(1200px)
-        scaleX(1.21)
-        rotateX(290deg);
-}
-
-80% {
-    transform:
-        translateY(262px)
-        perspective(800px)
-        scaleX(1.4)
-        rotateX(280deg);
-}
-
-90% {
-    transform:
-        translateY(300px)
-        perspective(5000px)
-        scaleX(1.07)
-        rotateX(270deg);
-}
+//20% {
+//    transform:
+//        translateY(22px)
+//        perspective(0)
+//        scaleX(1)
+//        rotateX(340deg);
+//}
+//
+//30% {
+//    transform:
+//        translateY(47px)
+//        perspective(0)
+//        scaleX(1)
+//        rotateX(330deg);
+//}
+//
+//40% {
+//    transform:
+//        translateY(51px)
+//        perspective(400px)
+//        scaleX(1.15)
+//        rotateX(320deg);
+//}
+//
+//60% {
+//    transform:
+//        translateY(79px)
+//        perspective(1200px)
+//        scaleX(1.14)
+//        rotateX(300deg);
+//}
+//
+//70% {
+//    transform:
+//        translateY(155px)
+//        perspective(1200px)
+//        scaleX(1.21)
+//        rotateX(290deg);
+//}
+//
+//80% {
+//    transform:
+//        translateY(262px)
+//        perspective(800px)
+//        scaleX(1.4)
+//        rotateX(280deg);
+//}
+//
+//90% {
+//    transform:
+//        translateY(300px)
+//        perspective(5000px)
+//        scaleX(1.07)
+//        rotateX(270deg);
+//}

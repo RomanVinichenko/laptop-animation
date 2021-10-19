@@ -1,7 +1,7 @@
 $(function () {
-    $('.laptop__top').on('click', function () {
-        $('.laptop__top').toggleClass('laptop__top--active');
-    });
+    // $('.laptop__top').on('click', function () {
+    //     $('.laptop__top').toggleClass('laptop__top--active');
+    // });
     $('.contact__type--branding').on('click', function () {
         $('.contact__type--branding').toggleClass('contact__type--active');
     });
@@ -33,8 +33,20 @@ $(function () {
         $('.links__list').toggleClass('links__list--active');
     });
 });
-// $('.article__wrapper').mixItUp();
 
+gsap.registerPlugin(ScrollTrigger);
+
+gsap.to('.laptop__top', {
+    scrollTrigger: {
+        trigger: '.laptop',
+        start: '20px top',
+        end: '750px center',
+        // markers: true,
+        scrub: 2,
+    },
+    rotationX: 0,
+    duration: 5,
+});
 var mixer = mixitup('.article__wrapper');
 
 // document.onwheel = function (event) {
