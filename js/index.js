@@ -1,7 +1,4 @@
 $(function () {
-    // $('.laptop__top').on('click', function () {
-    //     $('.laptop__top').toggleClass('laptop__top--active');
-    // });
     $('.contact__type--branding').on('click', function () {
         $('.contact__type--branding').toggleClass('contact__type--active');
     });
@@ -33,47 +30,16 @@ $(function () {
         $('.links__list').toggleClass('links__list--active');
     });
 });
-
 gsap.registerPlugin(ScrollTrigger);
-
 gsap.to('.laptop__top', {
     scrollTrigger: {
         trigger: '.laptop',
         start: '20px top',
-        end: '750px center',
+        end: '250px top',
         // markers: true,
-        scrub: 2,
+        scrub: 2.5,
     },
     rotationX: 0,
     duration: 5,
 });
 var mixer = mixitup('.article__wrapper');
-
-// document.onwheel = function (event) {
-//     console.log(event);
-//     if (event.deltaY > 0) {
-//         document.getElementById('line').innerHTML = 'вниз';
-//     } else {
-//         document.getElementById('line').innerHTML = 'вверх';
-//     }
-//
-//     var speed = event.deltaY;
-//     speed = Math.abs(speed);
-//     if (speed < 75) {
-//         document.getElementById('speed').innerHTML = 'низкая';
-//     } else if (speed < 125) {
-//         document.getElementById('speed').innerHTML = 'средняя';
-//     } else if (speed < 225) {
-//         document.getElementById('speed').innerHTML = 'высокая';
-//     } else {
-//         document.getElementById('speed').innerHTML = 'очень высокая';
-//     }
-// };
-
-// var left = 200;
-// document.getElementById('pole').onwheel = function (event) {
-//     const line = event.deltaY;
-//     left = left + line;
-//     document.getElementById('pole-2').style.left = left + 'px';
-//     return false;
-// };

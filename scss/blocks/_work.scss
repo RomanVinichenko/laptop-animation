@@ -1,16 +1,20 @@
 .work {
-    padding: 256px 0;
+    padding: 156px 0 256px;
     background-color: $bl;
 
     &__title {
         margin-bottom: 128px;
-        max-width: 258px;
         font-size: 42px;
         line-height: 56px;
 
         @include r($lg) {
             margin-bottom: 50px;
             font-size: 38px;
+            line-height: 48px;
+        }
+
+        @include r($md) {
+            text-align: center;
         }
     }
 
@@ -19,27 +23,18 @@
         justify-content: space-between;
         margin-bottom: 256px;
 
-        @include r($md) {
-            flex-wrap: wrap;
-        }
-
         @include r($lg) {
             margin-bottom: 75px;
+        }
+
+        @include r($md) {
+            flex-direction: column;
+            text-align: center;
         }
     }
 
     &__block {
         position: relative;
-        padding-top: 116px;
-
-        &::after {
-            content: "";
-            position: absolute;
-            left: 0;
-            top: 0;
-            width: 80px;
-            height: 80px;
-        }
 
         @include r($lg) {
             max-width: 250px;
@@ -50,15 +45,13 @@
             max-width: 100%;
 
             &:not(:last-child) {
-                margin-bottom: 15px;
+                margin-bottom: 64px;
             }
         }
     }
 
     &__block--circle {
-        &::after {
-            background-image: url("../images/decor-1.png");
-        }
+        max-width: 272px;
 
         @include r($lg) {
             margin-right: 10px;
@@ -66,13 +59,12 @@
 
         @include r($md) {
             margin: 0;
+            max-width: 100%;
         }
     }
 
     &__block--wave {
-        &::after {
-            background-image: url("../images/decor-2.png");
-        }
+        max-width: 283px;
 
         @include r($lg) {
             margin: 0 10px;
@@ -80,13 +72,12 @@
 
         @include r($md) {
             margin: 0;
+            max-width: 100%;
         }
     }
 
     &__block--square {
-        &::after {
-            background-image: url("../images/decor-3.png");
-        }
+        max-width: 258px;
 
         @include r($lg) {
             margin-left: 10px;
@@ -94,6 +85,7 @@
 
         @include r($md) {
             margin: 0;
+            max-width: 100%;
         }
     }
 
@@ -101,10 +93,14 @@
         margin-bottom: 12px;
         font-size: 28px;
         line-height: 40px;
+
+        @include r($lg) {
+            line-height: 34px;
+        }
     }
 
     &__block-text {
-        max-width: 272px;
+        max-width: 270px;
         letter-spacing: -0.03em;
         color: $black-gray;
 
@@ -130,7 +126,6 @@
         @include r($md) {
             font-size: 20px;
             line-height: 30px;
-            text-align: left;
         }
     }
 

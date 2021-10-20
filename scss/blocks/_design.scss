@@ -36,6 +36,22 @@
         @extend %jeko-700;
     }
 
+    &__title--first {
+        animation-duration: 1s;
+    }
+
+    &__title--second {
+        animation-duration: 1.2s;
+    }
+
+    &__title--third {
+        animation-duration: 1.4s;
+    }
+
+    &__title--fourth {
+        animation-duration: 1.6s;
+    }
+
     &__text-block {
         max-width: 576px;
 
@@ -61,7 +77,36 @@
         @extend %jeko-500;
     }
 
+    &__text--accent {
+        max-width: 515px;
+    }
+
+    &__title--first,
+    &__title--second,
+    &__title--third,
+    &__title--fourth {
+        display: block;
+        animation-name: title-ani;
+
+        @include r($lg) {
+            display: inline-block;
+            animation: none;
+        }
+    }
+
     @include r($lg) {
         padding: 100px 0;
+    }
+}
+
+@keyframes title-ani {
+    0% {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
     }
 }

@@ -24,7 +24,7 @@
     }
 
     &__title {
-        margin-bottom: 64px;
+        margin-bottom: 56px;
         font-size: 56px;
         line-height: 64px;
 
@@ -75,9 +75,15 @@
     }
 
     &__link {
+        border-bottom: 1px solid transparent;
         font-size: 14px;
         line-height: 20px;
         color: #f6f6f6;
+        transition: border-bottom 0.3s;
+
+        &:hover {
+            border-bottom: 1px solid #f6f6f6;
+        }
 
         @extend %jeko-600;
     }
@@ -116,20 +122,13 @@
         @extend %jeko-800;
     }
 
-    &__type--active {
-        border: 1px solid transparent;
-        color: $wh;
-        background-image: url("../images/grad.png");
-        background-position: top center;
-        background-size: cover;
-        background-repeat: no-repeat;
-    }
-
     &__input {
         margin-bottom: 40px;
         padding-bottom: 20px;
+        width: 100%;
         max-width: 272px;
         border: none;
+        border-bottom: 1px solid $black-gray;
         letter-spacing: -0.03em;
         color: $black-gray;
         background-color: transparent;
@@ -140,14 +139,18 @@
 
         &:not(:last-child) {
             margin-right: 33px;
+
+            @include r($lg) {
+                margin-right: 0;
+            }
         }
 
         @include r($xl) {
             margin-bottom: 32px;
         }
 
-        @include r($md) {
-            border-bottom: 1px solid $black-gray;
+        @include r($lg) {
+            display: block;
         }
 
         @include r($sm) {
@@ -222,4 +225,13 @@
 
         @extend %jeko-500;
     }
+}
+
+.contact__type--active {
+    border: 1px solid transparent;
+    color: $wh;
+    background-image: url("../images/grad.png");
+    background-position: top center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
