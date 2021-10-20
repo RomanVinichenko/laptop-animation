@@ -1,26 +1,18 @@
 .thank {
-    padding: 36px 0 80px;
-    height: 100vh;
     background-color: $bl;
 
     &__wrapper {
         display: flex;
+        align-items: center;
         justify-content: space-between;
-
-        @include r($xl) {
-            padding-top: 100px;
-        }
-
-        @include r($md) {
-            padding-top: 50px;
-        }
+        min-height: 100vh;
     }
 
     &__content {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        padding: 90px 0;
+        padding: 30px 0 0;
         min-height: 545px;
         max-width: 505px;
 
@@ -69,9 +61,5 @@
         @include r($xl) {
             max-width: 400px;
         }
-    }
-
-    @include r($xl) {
-        padding: 30px 0;
     }
 }

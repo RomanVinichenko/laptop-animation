@@ -2,13 +2,13 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    padding: 100px 0;
+    padding: 100px 0 0;
 
     .window {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        padding: 314px 32px 32px;
+        padding: 314px 32px 22px;
         width: 100%;
         max-width: 372px;
         border: 1px solid $black-dark;
