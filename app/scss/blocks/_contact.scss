@@ -223,7 +223,9 @@
             color: $black-gray;
         }
 
-        @extend %jeko-500;
+        //@extend %jeko-500;
+        font-family: "Jeko-Medium", sans-serif;
+        font-weight: 500;
     }
 }
 
