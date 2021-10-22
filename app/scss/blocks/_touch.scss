@@ -47,6 +47,8 @@
             font-size: 36px;
             line-height: 42px;
         }
+
+        @extend %jeko-700;
     }
 
     &__title--color {
