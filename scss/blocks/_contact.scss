@@ -204,11 +204,11 @@
         background-color: $bl;
         cursor: pointer;
 
-        //&:hover {
-        //    background: linear-gradient(90deg, #0B89A8, #C3D0C4, #E9618C, #8AA8B6,);
-        //    background-position: 0 0;
-        //    animation: background 2s infinite alternate;
-        //}
+        &:hover {
+            background: linear-gradient(90deg, #0B89A8, #C3D0C4, #E9618C, #8AA8B6,);
+            background-position: 0 0;
+            animation: background 2s infinite alternate;
+        }
 
         &:not(:last-child) {
             margin-right: 14px;
@@ -243,8 +243,8 @@
     background-repeat: no-repeat;
 }
 
-//@keyframes background {
-//    100% {
-//        background-position: 200px 0;
-//    }
-//}
+@keyframes background {
+    100% {
+        background-position: 200px 0;
+    }
+}
