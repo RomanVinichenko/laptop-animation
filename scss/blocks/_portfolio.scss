@@ -88,6 +88,10 @@
     @include r($lg) {
         padding-bottom: 20px;
     }
+
+    @include r($sm) {
+        flex-wrap: wrap;
+    }
 }
 
 .article {

@@ -1,9 +1,11 @@
 .error {
-    padding: 233px 0 336px;
-    height: 100vh;
     background-color: $bl;
 
     &__wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        min-height: 100vh;
         max-width: 528px;
     }
 
@@ -28,7 +30,7 @@
 
     &__button {
         position: relative;
-        padding-right: 40px;
+        width: 210px;
         font-size: 20px;
         line-height: 32px;
 
