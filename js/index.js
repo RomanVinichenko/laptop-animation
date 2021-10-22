@@ -42,4 +42,5 @@ gsap.to('.laptop__top', {
     rotationX: 0,
     duration: 5,
 });
+
 var mixer = mixitup('.article__wrapper');

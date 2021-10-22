@@ -196,7 +196,7 @@
 
     &__type,
     &__budget {
-        padding: 8px 22px;
+        padding: 10px 22px 5px;
         border: 1px solid $black-gray;
         border-radius: 32px;
         letter-spacing: -0.03em;
@@ -228,8 +228,9 @@
 }
 
 .contact__type--active {
-    border: 1px solid transparent;
     color: $wh;
+    height: 100%;
+    border-image: url("../images/grad.png") 45 fill / 25px;
     background-image: url("../images/grad.png");
     background-position: top center;
     background-size: cover;

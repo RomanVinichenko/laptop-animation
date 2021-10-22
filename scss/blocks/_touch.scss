@@ -31,16 +31,16 @@
     }
 
     &__title {
-        margin-bottom: 45px;
+        margin-bottom: 30px;
         font-size: 80px;
         line-height: 96px;
         letter-spacing: -0.03em;
         text-align: center;
 
         @include r($lg) {
-            margin-bottom: 36px;
+            margin-bottom: 26px;
             font-size: 60px;
-            line-height: 56px;
+            line-height: 67px;
         }
 
         @include r($md) {
@@ -50,12 +50,19 @@
     }
 
     &__title--color {
+        height: 110px;
         display: block;
         -webkit-text-fill-color: transparent;
         background-image: url("../images/grad.png");
         background-position: center;
         background-repeat: no-repeat;
         background-clip: text;
+        @include r($lg) {
+            height: 80px;
+        }
+        @include r($md) {
+            height: 55px;
+        }
     }
 
     &__mail {
