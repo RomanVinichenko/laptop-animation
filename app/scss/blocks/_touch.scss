@@ -50,16 +50,18 @@
     }
 
     &__title--color {
-        height: 110px;
         display: block;
+        height: 110px;
         -webkit-text-fill-color: transparent;
         background-image: url("../images/grad.png");
         background-position: center;
         background-repeat: no-repeat;
         background-clip: text;
+
         @include r($lg) {
             height: 80px;
         }
+
         @include r($md) {
             height: 55px;
         }

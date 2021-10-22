@@ -1,6 +1,14 @@
 .together {
-    padding: 283px 0;
     background-color: #f6f6f6;
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 0 -10px;
+        min-height: 100vh;
+    }
 
     &__pretitle {
         display: block;
@@ -25,7 +33,7 @@
     }
 
     &__title {
-        margin: 0 auto 42px;
+        margin-bottom: 42px;
         max-width: 800px;
         font-size: 80px;
         line-height: 96px;
@@ -34,7 +42,7 @@
         color: $bl;
 
         @include r($xl) {
-            margin: 0 auto 36px;
+            margin-bottom: 36px;
             font-size: 70px;
             line-height: 65px;
         }
