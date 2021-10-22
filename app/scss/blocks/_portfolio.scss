@@ -44,16 +44,14 @@
         font-size: 20px;
         line-height: 32px;
         color: #6b7188;
+        padding: 0;
         background-color: transparent;
         transition: all 0.3s;
         cursor: pointer;
 
         &:hover {
-            font-size: 20px;
-            line-height: 32px;
             color: $bl;
-
-            @extend %jeko-700;
+            font-weight: 700;
         }
 
         @include r($md) {
@@ -62,9 +60,15 @@
 
         @include r($sm) {
             font-size: 12px;
+            line-height: 16px;
         }
 
         @extend %jeko-500;
+    }
+    &__link--accent {
+        @include r($sm) {
+            min-width: 52px;
+        }
     }
 
     &__item {
@@ -89,8 +93,8 @@
         padding-bottom: 20px;
     }
 
-    @include r($sm) {
-        flex-wrap: wrap;
+    @include r($md) {
+        overflow-x: scroll;
     }
 }
 
