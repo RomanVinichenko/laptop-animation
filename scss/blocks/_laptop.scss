@@ -63,7 +63,7 @@
     max-width: 600px;
     overflow: hidden;
     background-color: $wh;
-    transform: rotateX(-100.5deg) rotateY(0deg);
+    transform: rotateX(-90deg) rotateY(0deg);
     transform-origin: center bottom;
 
     @include r($lg) {
