@@ -1,5 +1,12 @@
 .particle {
     background-color: $bl;
+  margin-bottom: 250px;
+  @include r($xl) {
+    margin-bottom: 200px;
+  }
+  @include r($lg) {
+    margin-bottom: 150px;
+  }
 
     &__top {
         display: flex;
@@ -71,7 +78,7 @@
 }
 
 .particle-content {
-    padding: 315px 0 250px;
+    padding: 0 0 250px;
 
     &__meaning {
         margin-bottom: 128px;
@@ -171,10 +178,10 @@
     }
 
     @include r($xl) {
-        padding: 250px 0 150px;
+        padding: 0 0 150px;
     }
 
     @include r($lg) {
-        padding: 170px 0 55px;
+        padding: 0 0 55px;
     }
 }
