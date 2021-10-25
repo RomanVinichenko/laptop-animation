@@ -35,13 +35,14 @@ gsap.registerPlugin(ScrollTrigger);
 gsap.to('.laptop__top', {
     scrollTrigger: {
         trigger: '.laptop',
-        start: '20px top',
-        end: '250px top',
+        start: 'top top',
+        end: 'bottom top',
         // markers: true,
         scrub: 2.5,
+        pin: true,
     },
     rotationX: 0,
-    duration: 5,
+    duration: 6,
 });
 
 var mixer = mixitup('.article__wrapper');
