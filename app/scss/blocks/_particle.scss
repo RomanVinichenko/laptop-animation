@@ -1,12 +1,6 @@
 .particle {
+    margin-bottom: 250px;
     background-color: $bl;
-  margin-bottom: 250px;
-  @include r($xl) {
-    margin-bottom: 200px;
-  }
-  @include r($lg) {
-    margin-bottom: 150px;
-  }
 
     &__top {
         display: flex;
@@ -72,6 +66,14 @@
             font-size: 28px;
             line-height: 36px;
         }
+    }
+
+    @include r($xl) {
+        margin-bottom: 200px;
+    }
+
+    @include r($lg) {
+        margin-bottom: 150px;
     }
 
     @extend %jeko-700;
