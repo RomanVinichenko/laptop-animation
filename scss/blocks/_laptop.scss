@@ -1,8 +1,8 @@
 .laptop {
+    min-height: 100vh;
     perspective: 2500px;
     perspective-origin: 50% 100%;
     transform-style: preserve-3d;
-    min-height: 100vh;
 
     &__title {
         margin: 0 auto 80px;
@@ -22,11 +22,13 @@
             font-size: 48px;
             line-height: 48px;
         }
+
         @include r($md) {
             margin: 0 auto 180px 0;
             font-size: 32px;
             line-height: 40px;
         }
+
         @include r($sm) {
             margin: 0 auto 150px 0;
         }
@@ -36,15 +38,14 @@
 
     &__title--first {
         display: block;
-
-        animation-name: title-ani;
-        animation-duration: 1.2s;
+        opacity: 0;
+        transform: translateY(80px);
     }
 
     &__title--second {
         display: block;
-        animation-name: title-ani;
-        animation-duration: 1.5s;
+        opacity: 0;
+        transform: translateY(80px);
     }
 
     @include r($lg) {
@@ -126,18 +127,4 @@
 .laptop__bottom-img {
     display: block;
     margin: 0 auto;
-}
-
-@keyframes title-ani {
-    0% {
-        visibility: hidden;
-        opacity: 0;
-        transform: translateY(40px);
-    }
-
-    100% {
-        visibility: visible;
-        opacity: 1;
-        transform: translateY(0);
-    }
 }

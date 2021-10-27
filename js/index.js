@@ -1,3 +1,8 @@
+$(function () {
+    $('.links__button').on('click', function () {
+        $('.links__list').toggleClass('links__list--active');
+    });
+});
 gsap.registerPlugin(ScrollTrigger);
 gsap.to('.laptop__top', {
     scrollTrigger: {
@@ -10,6 +15,17 @@ gsap.to('.laptop__top', {
     },
     rotationX: 0,
     duration: 5,
+});
+
+gsap.to('.laptop__title--first', {
+    opacity: 1,
+    translateY: 0,
+    duration: 1,
+});
+gsap.to('.laptop__title--second', {
+    opacity: 1,
+    translateY: 0,
+    duration: 1.2,
 });
 
 window.addEventListener('load', function () {
@@ -28,6 +44,31 @@ var mixit = document.querySelector('.article__wrapper');
 if (mixit) {
     var mixer = mixitup('.article__wrapper');
 }
+
+(function () {
+    const link = document.querySelectorAll('.contact__type');
+    const cursor = document.querySelector('.cursor');
+
+    const animateit = function (e) {
+        const span = this.querySelector('.button__hover');
+        const { offsetX: x, offsetY: y } = e,
+            { offsetWidth: width, offsetHeight: height } = this,
+            move = 15,
+            xMove = (x / width) * (move * 2) - move,
+            yMove = (y / height) * (move * 2) - move;
+        span.style.transform = `translate(${xMove}px, ${yMove}px)`;
+        if (e.type === 'mouseleave') span.style.transform = '';
+    };
+    const editCursor = (e) => {
+        const { clientX: x, clientY: y } = e;
+        cursor.style.left = x + 'px';
+        cursor.style.top = y + 'px';
+    };
+
+    link.forEach((b) => b.addEventListener('mousemove', animateit));
+    link.forEach((b) => b.addEventListener('mouseleave', animateit));
+    window.addEventListener('mousemove', editCursor);
+})();
 
 // gsap.to('.article__img', {
 //     yPercent: -100,
