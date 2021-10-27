@@ -199,24 +199,12 @@
         position: relative;
         z-index: 3;
         padding: 8px 22px 7px;
-        border: none;
         border-radius: 32px;
         letter-spacing: -0.03em;
         color: $wh;
         background-color: transparent;
+        border: 1px solid $black-gray;
         cursor: pointer;
-
-        &::after {
-            content: "";
-            position: absolute;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            border: 1px solid $black-gray;
-            border-radius: 32px;
-            background-color: transparent;
-        }
 
         &:not(:last-child) {
             margin-right: 14px;
@@ -224,16 +212,6 @@
             @include r($md) {
                 margin-right: 2px;
             }
-        }
-
-        &:hover {
-            color: $wh;
-            background-image: url("../images/gradient-gray.gif");
-            background-size: cover;
-        }
-
-        &:hover::after {
-            border: none;
         }
 
         @include r($xl) {

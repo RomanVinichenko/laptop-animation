@@ -85,6 +85,20 @@ body {
     }
 }
 
-//.pin-spacer {
-//    min-height: 100vh;
-//}
+#preloader {
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 100;
+    position: fixed;
+    background-color: $wh;
+
+    &.hide {
+        z-index: -100;
+    }
+}
+
+.pin-spacer {
+    min-height: 100vh;
+}
