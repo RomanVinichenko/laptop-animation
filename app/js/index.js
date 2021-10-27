@@ -36,13 +36,35 @@ gsap.to('.laptop__top', {
     scrollTrigger: {
         trigger: '.laptop',
         start: 'top top',
-        end: 'bottom top',
+        end: '800px top',
         // markers: true,
         scrub: 2.5,
         pin: true,
     },
     rotationX: 0,
-    duration: 6,
+    duration: 5,
+});
+gsap.to('.article__img', {
+    yPercent: -100,
+    ease: 'none',
+    scrollTrigger: {
+        trigger: '.article__wrapper',
+        // start: "top bottom", // the default values
+        // end: "bottom top",
+        scrub: true,
+        markers: true,
+    },
+});
+
+gsap.to('.article', {
+    yPercent: 50,
+    ease: 'none',
+    scrollTrigger: {
+        trigger: '.pSection',
+        // start: "top bottom", // the default values
+        // end: "bottom top",
+        scrub: true,
+    },
 });
 
 var mixer = mixitup('.article__wrapper');
