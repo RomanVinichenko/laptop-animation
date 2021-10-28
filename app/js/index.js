@@ -71,24 +71,14 @@ if (mixit) {
 })();
 
 // gsap.to('.article__img', {
-//     yPercent: -100,
+//     yPercent: -10,
 //     ease: 'none',
 //     scrollTrigger: {
-//         trigger: '.article__wrapper',
-//         // start: "top bottom", // the default values
-//         // end: "bottom top",
+//         trigger: '.article__img',
+//         start: '500px top',
+//         end: 'bottom top',
 //         scrub: true,
 //         markers: true,
-//     },
-// });
-//
-// gsap.to('.article', {
-//     yPercent: 50,
-//     ease: 'none',
-//     scrollTrigger: {
-//         trigger: '.pSection',
-//         // start: "top bottom", // the default values
-//         // end: "bottom top",
-//         scrub: true,
+//         multiple: true,
 //     },
 // });
