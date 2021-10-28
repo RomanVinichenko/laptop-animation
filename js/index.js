@@ -53,7 +53,7 @@ if (mixit) {
         const span = this.querySelector('.button__hover');
         const { offsetX: x, offsetY: y } = e,
             { offsetWidth: width, offsetHeight: height } = this,
-            move = 15,
+            move = 10,
             xMove = (x / width) * (move * 2) - move,
             yMove = (y / height) * (move * 2) - move;
         span.style.transform = `translate(${xMove}px, ${yMove}px)`;
