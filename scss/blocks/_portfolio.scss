@@ -119,8 +119,20 @@
         }
     }
 
-    &__img {
+    &__img-wrapper {
         margin-bottom: 28px;
+        overflow: hidden;
+
+        &:hover {
+            .article__img {
+                transform: scale(0.98);
+            }
+        }
+    }
+
+    &__img {
+        display: block;
+        transition: transform 0.4s;
     }
 
     &__title {
