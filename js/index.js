@@ -82,3 +82,11 @@ if (mixit) {
 //         multiple: true,
 //     },
 // });
+
+// gsap.to('.article__img', {
+//     scrollTrigger: {
+//         scrub: true,
+//     },
+//     y: (i, target) => -ScrollTrigger.maxScroll(window) * target.dataset.speed,
+//     ease: 'none',
+// });
