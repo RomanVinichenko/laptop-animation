@@ -121,6 +121,7 @@
 
     &__img-wrapper {
         margin-bottom: 28px;
+        height: 70%;
         overflow: hidden;
 
         &:hover {
@@ -132,6 +133,7 @@
 
     &__img {
         display: block;
+        object-fit: cover;
         transition: transform 0.4s;
     }
 

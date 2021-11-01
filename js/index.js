@@ -48,26 +48,27 @@ if (mixit) {
 (function () {
     const link = document.querySelectorAll('.contact__type');
     const cursor = document.querySelector('.cursor');
+    if (cursor) {
+        const animateit = function (e) {
+            const span = this.querySelector('.button__hover');
+            const { offsetX: x, offsetY: y } = e,
+                { offsetWidth: width, offsetHeight: height } = this,
+                move = 10,
+                xMove = (x / width) * (move * 2) - move,
+                yMove = (y / height) * (move * 2) - move;
+            span.style.transform = `translate(${xMove}px, ${yMove}px)`;
+            if (e.type === 'mouseleave') span.style.transform = '';
+        };
+        const editCursor = (e) => {
+            const { clientX: x, clientY: y } = e;
+            cursor.style.left = x + 'px';
+            cursor.style.top = y + 'px';
+        };
 
-    const animateit = function (e) {
-        const span = this.querySelector('.button__hover');
-        const { offsetX: x, offsetY: y } = e,
-            { offsetWidth: width, offsetHeight: height } = this,
-            move = 10,
-            xMove = (x / width) * (move * 2) - move,
-            yMove = (y / height) * (move * 2) - move;
-        span.style.transform = `translate(${xMove}px, ${yMove}px)`;
-        if (e.type === 'mouseleave') span.style.transform = '';
-    };
-    const editCursor = (e) => {
-        const { clientX: x, clientY: y } = e;
-        cursor.style.left = x + 'px';
-        cursor.style.top = y + 'px';
-    };
-
-    link.forEach((b) => b.addEventListener('mousemove', animateit));
-    link.forEach((b) => b.addEventListener('mouseleave', animateit));
-    window.addEventListener('mousemove', editCursor);
+        link.forEach((b) => b.addEventListener('mousemove', animateit));
+        link.forEach((b) => b.addEventListener('mouseleave', animateit));
+        window.addEventListener('mousemove', editCursor);
+    }
 })();
 
 // gsap.to('.article__img', {
@@ -82,7 +83,7 @@ if (mixit) {
 //         multiple: true,
 //     },
 // });
-
+//
 // gsap.to('.article__img', {
 //     scrollTrigger: {
 //         scrub: true,
@@ -90,3 +91,23 @@ if (mixit) {
 //     y: (i, target) => -ScrollTrigger.maxScroll(window) * target.dataset.speed,
 //     ease: 'none',
 // });
+
+var img = document.querySelectorAll('.article__img-wrapper');
+img.forEach(function (el) {
+    let img = el.querySelector('.article__img');
+    gsap.to(img, {
+        y: function y() {
+            return -(img.scrollHeight - el.getBoundingClientRect().height) + 'px';
+        },
+        duration: 0.005,
+        ease: 'expo.Out',
+        scrollTrigger: {
+            // pin: true,
+            scrub: 1,
+            start: 'top bottom',
+            end: 'bottom top',
+            trigger: el,
+            // markers: true,
+        },
+    });
+});
