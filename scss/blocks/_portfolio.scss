@@ -123,11 +123,10 @@
         margin-bottom: 28px;
         height: 70%;
         overflow: hidden;
+        transition: transform 0.2s;
 
         &:hover {
-            .article__img {
-                transform: scale(0.98);
-            }
+            transform: scale(0.98);
         }
     }
 
