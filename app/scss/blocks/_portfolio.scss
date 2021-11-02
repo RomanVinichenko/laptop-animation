@@ -1,192 +1,195 @@
 .portfolio {
-    padding: 156px 0;
+  padding: 156px 0;
 
-    &__title {
-        margin-bottom: 156px;
-        max-width: 688px;
-        font-size: 56px;
-        line-height: 64px;
-        color: $bl;
+  &__title {
+    margin-bottom: 156px;
+    max-width: 688px;
+    font-size: 56px;
+    line-height: 64px;
+    color: $bl;
 
-        @include r($xxl) {
-            font-size: 45px;
-            line-height: 54px;
-        }
-
-        @include r($lg) {
-            margin-bottom: 114px;
-            max-width: 500px;
-            font-size: 40px;
-            line-height: 48px;
-        }
-
-        @include r($lg) {
-            max-width: 500px;
-            font-size: 32px;
-            line-height: 40px;
-        }
-
-        @extend %jeko-800;
+    @include r($xxl) {
+      font-size: 45px;
+      line-height: 54px;
     }
 
     @include r($lg) {
-        padding: 126px 0;
+      margin-bottom: 114px;
+      max-width: 500px;
+      font-size: 40px;
+      line-height: 48px;
     }
+
+    @include r($lg) {
+      max-width: 500px;
+      font-size: 32px;
+      line-height: 40px;
+    }
+
+    @extend %jeko-800;
+  }
+
+  @include r($lg) {
+    padding: 126px 0;
+  }
 }
 
 .category {
-    display: flex;
-    padding-bottom: 36px;
-    border-bottom: 1px solid #6b7188;
+  display: flex;
+  padding-bottom: 36px;
+  border-bottom: 1px solid #6b7188;
 
-    &__link {
-        padding: 0;
-        border: none;
-        font-size: 20px;
-        line-height: 32px;
-        color: #6b7188;
-        background-color: transparent;
-        transition: all 0.3s;
-        cursor: pointer;
+  &__link {
+    padding: 0;
+    border: none;
+    font-size: 20px;
+    line-height: 32px;
+    color: #6b7188;
+    background-color: transparent;
+    transition: all 0.3s;
+    cursor: pointer;
 
-        &:hover {
-            font-weight: 700;
-            color: $bl;
-        }
-
-        @include r($md) {
-            font-size: 16px;
-        }
-
-        @include r($sm) {
-            font-size: 12px;
-            line-height: 16px;
-        }
-
-        @extend %jeko-500;
-    }
-
-    &__link--accent {
-        @include r($sm) {
-            min-width: 52px;
-        }
-    }
-
-    &__item {
-        &:not(:last-child) {
-            margin-right: 68px;
-
-            @include r($lg) {
-                margin-right: 45px;
-            }
-
-            @include r($md) {
-                margin-right: 30px;
-            }
-
-            @include r($sm) {
-                margin-right: 10px;
-            }
-        }
-    }
-
-    @include r($lg) {
-        padding-bottom: 20px;
+    &:hover {
+      font-weight: 700;
+      color: $bl;
     }
 
     @include r($md) {
-        overflow-x: scroll;
+      font-size: 16px;
     }
+
+    @include r($sm) {
+      font-size: 12px;
+      line-height: 16px;
+    }
+
+    @extend %jeko-500;
+  }
+
+  &__link--accent {
+    @include r($sm) {
+      min-width: 52px;
+    }
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-right: 68px;
+
+      @include r($lg) {
+        margin-right: 45px;
+      }
+
+      @include r($md) {
+        margin-right: 30px;
+      }
+
+      @include r($sm) {
+        margin-right: 10px;
+      }
+    }
+  }
+
+  @include r($lg) {
+    padding-bottom: 20px;
+  }
+
+  @include r($md) {
+    overflow-x: scroll;
+  }
 }
 
 .article {
-    max-width: 576px;
+  max-width: 576px;
 
-    &__wrapper {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        padding: 100px 0;
+  &__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 100px 0;
 
-        @include r($xl) {
-            padding: 80px 0;
-        }
-
-        @include r($md) {
-            flex-direction: column;
-            align-items: center;
-            padding: 40px 0;
-        }
-    }
-
-    &__img-wrapper {
-        margin-bottom: 28px;
-        height: 70%;
-        overflow: hidden;
-        transition: transform 0.2s;
-
-        &:hover {
-            transform: scale(0.98);
-        }
-    }
-
-    &__img {
-        display: block;
-        object-fit: cover;
-        transition: transform 0.4s;
-    }
-
-    &__title {
-        margin-bottom: 8px;
-        max-width: 357px;
-        font-size: 24px;
-        line-height: 32px;
-        color: $bl;
-
-        @extend %jeko-800;
-    }
-
-    &__type {
-        font-size: 14px;
-        line-height: 20px;
-        color: #6b7188;
-
-        @extend %jeko-500;
-    }
-
-    &--top {
-        margin-top: 200px;
-
-        @include r($xl) {
-            margin-top: 81px;
-        }
-
-        @include r($md) {
-            margin: 40px 0;
-        }
-    }
-
-    &--bottom {
-        margin-bottom: 200px;
-
-        @include r($xl) {
-            margin-bottom: 81px;
-        }
-
-        @include r($md) {
-            margin: 40px 0;
-        }
-    }
-
-    @include r($xxl) {
-        max-width: 430px;
-    }
-
-    @include r($lg) {
-        max-width: 310px;
+    @include r($xl) {
+      padding: 80px 0;
     }
 
     @include r($md) {
-        max-width: 400px;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px 0;
     }
+  }
+
+  &__img-wrapper {
+    margin-bottom: 28px;
+    height: 70%;
+    overflow: hidden;
+    transition: transform 0.2s;
+
+    &:hover {
+      transform: scale(0.98);
+    }
+  }
+
+  &__img {
+    display: block;
+    object-fit: cover;
+    transition: transform 0.4s;
+  }
+
+  &__title {
+    margin-bottom: 8px;
+    max-width: 357px;
+    font-size: 24px;
+    line-height: 32px;
+    color: $bl;
+
+    @extend %jeko-800;
+  }
+
+  &__type {
+    font-size: 14px;
+    line-height: 20px;
+    color: #6b7188;
+
+    @extend %jeko-500;
+  }
+
+  &--top {
+    margin-top: 200px;
+
+    @include r($xl) {
+      margin-top: 81px;
+    }
+
+    @include r($md) {
+      margin: 40px 0;
+    }
+  }
+
+  &--bottom {
+    margin-bottom: 200px;
+
+    @include r($xl) {
+      margin-bottom: 81px;
+    }
+
+    @include r($md) {
+      margin: 40px 0;
+    }
+  }
+
+  @include r($xxl) {
+    max-width: 430px;
+  }
+
+  @include r($lg) {
+    max-width: 310px;
+  }
+
+  @include r($md) {
+    max-width: 400px;
+  }
+}
+.article:hover ~ .cursor {
+  transform: translate(-50%, -50%) scale(6);
 }

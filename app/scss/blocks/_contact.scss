@@ -267,15 +267,7 @@
     }
 }
 
-.cursor {
-    position: fixed;
-    padding: 5px;
-    border-radius: 50%;
-    background-color: $wh;
-    mix-blend-mode: difference;
-    transition: transform 0.3s ease;
-    pointer-events: none;
-}
+
 
 button:hover ~ .cursor {
     transform: translate(-50%, -50%) scale(6);
