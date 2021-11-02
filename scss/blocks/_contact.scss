@@ -108,6 +108,37 @@
         }
     }
 
+    &__block {
+        display: flex;
+
+        @include r($lg) {
+            flex-direction: column;
+        }
+    }
+
+    &__name {
+        margin-right: 30px;
+        width: 100%;
+        max-width: 273px;
+
+        @include r($lg) {
+            margin-right: 0;
+        }
+
+        @include r($lg) {
+            max-width: 573px;
+        }
+    }
+
+    &__email {
+        width: 100%;
+        max-width: 273px;
+
+        @include r($lg) {
+            max-width: 573px;
+        }
+    }
+
     &__label {
         display: block;
         margin-bottom: 24px;
@@ -123,7 +154,6 @@
         margin-bottom: 40px;
         padding-bottom: 20px;
         width: 100%;
-        max-width: 272px;
         border: none;
         border-bottom: 1px solid #6b7188;
         letter-spacing: -0.03em;
@@ -252,5 +282,5 @@ button:hover ~ .cursor {
 }
 
 .contact__input--long {
-    max-width: 582px;
+    max-width: 576px;
 }
