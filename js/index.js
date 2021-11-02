@@ -99,11 +99,8 @@ img.forEach(function (el) {
         y: function y() {
             return -(img.scrollHeight - el.getBoundingClientRect().height) + 'px';
         },
-        duration: 0.005,
-        ease: 'expo.Out',
         scrollTrigger: {
-            // pin: true,
-            scrub: 1,
+            scrub: 0.3,
             start: 'top bottom',
             end: 'bottom top',
             trigger: el,

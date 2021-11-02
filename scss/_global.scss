@@ -102,3 +102,13 @@ body {
 .pin-spacer {
     min-height: 100vh;
 }
+
+.cursor {
+    position: fixed;
+    padding: 5px;
+    border-radius: 50%;
+    background-color: $wh;
+    mix-blend-mode: difference;
+    transition: transform 0.3s ease;
+    pointer-events: none;
+}
