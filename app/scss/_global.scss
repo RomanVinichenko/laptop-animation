@@ -112,3 +112,11 @@ body {
     transition: transform 0.3s ease;
     pointer-events: none;
 }
+
+.contact__type:hover .cursor {
+    transform: translate(-50%, -50%) scale(6);
+}
+
+.dad-cursor {
+    transform: translate(-50%, -50%) scale(6);
+}

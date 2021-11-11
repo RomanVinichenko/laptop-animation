@@ -1,0 +1,13 @@
+.preview {
+    &__picture {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        background-color: #fcf9f5;
+    }
+}
+
+.preview__picture--dark {
+    background: linear-gradient(321.05deg, #020b17 3.36%, #111e31 94.8%);
+}

@@ -1,0 +1,40 @@
+.case {
+    position: relative;
+    z-index: 0;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        z-index: -1;
+        opacity: 0.3;
+        background: linear-gradient(321.05deg, #020b17 3.36%, #111e31 94.8%);
+    }
+
+    &__inner {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        padding-bottom: 168px;
+        min-height: 100vh;
+        max-width: 576px;
+
+        @extend %jeko-700;
+    }
+
+    &__name {
+        margin-bottom: 12px;
+        line-height: 20px;
+    }
+
+    &__title {
+        font-size: 56px;
+        line-height: 64px;
+    }
+}
