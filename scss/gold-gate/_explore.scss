@@ -1,0 +1,47 @@
+.explore {
+    background-color: $bl;
+
+    &__inner {
+        display: flex;
+        padding: 300px 0 250px;
+    }
+
+    &__direct {
+        margin-right: 65px;
+        font-size: 18px;
+        line-height: 32px;
+        color: $black-gray;
+    }
+
+    &__title {
+        margin-bottom: 60px;
+        font-size: 56px;
+        line-height: 64px;
+        text-decoration: underline 3px;
+        text-underline-offset: 3px;
+    }
+
+    &__block {
+        max-width: 490px;
+    }
+
+    &__link {
+        position: relative;
+        padding-right: 105px;
+        font-size: 20px;
+
+        &::after {
+            content: "";
+            position: absolute;
+            right: 0;
+            top: 50%;
+            width: 70px;
+            height: 16px;
+            background-image: url("../images/gold-gate/arrow.svg");
+            background-repeat: no-repeat;
+            transform: translateY(-50%);
+        }
+    }
+
+    @extend %jeko-700;
+}

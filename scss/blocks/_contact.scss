@@ -251,7 +251,7 @@
     }
 }
 
-.button__hover {
+.contact__part {
     display: inline-block;
     letter-spacing: -0.03em;
     color: $wh;
@@ -265,12 +265,6 @@
             margin-right: 2px;
         }
     }
-}
-
-
-
-button:hover ~ .cursor {
-    transform: translate(-50%, -50%) scale(6);
 }
 
 .contact__input--long {

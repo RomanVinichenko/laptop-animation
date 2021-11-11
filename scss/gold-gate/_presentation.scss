@@ -1,0 +1,19 @@
+.presentation {
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__picture {
+        max-width: 578px;
+    }
+
+    &__img {
+        max-width: 576px;
+        object-fit: cover;
+    }
+
+    &__picture--right {
+        padding-top: 400px;
+    }
+}

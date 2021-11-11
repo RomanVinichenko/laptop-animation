@@ -1,0 +1,59 @@
+.goal {
+    color: $bl;
+
+    &__title {
+        margin-bottom: 100px;
+        max-width: 728px;
+        font-size: 32px;
+        line-height: 44px;
+    }
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__points {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        height: 180px;
+        max-width: 550px;
+    }
+
+    &__point {
+        width: 100%;
+        max-width: 50%;
+    }
+
+    &__point-title {
+        margin-bottom: 12px;
+        font-size: 12px;
+        line-height: 16px;
+        text-transform: uppercase;
+        color: #6b7188;
+    }
+
+    &__point-name {
+        color: #000;
+    }
+
+    &__descr {
+        max-width: 420px;
+    }
+
+    &__text {
+        font-size: 18px;
+        line-height: 28px;
+        letter-spacing: -0.02em;
+        color: #6b7188;
+
+        &:not(:last-child) {
+            margin-bottom: 30px;
+        }
+
+        @extend %jeko-500;
+    }
+
+    @extend %jeko-700;
+}

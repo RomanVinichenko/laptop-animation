@@ -50,14 +50,18 @@ if (mixit) {
     const cursor = document.querySelector('.cursor');
     if (cursor) {
         const animateit = function (e) {
-            const span = this.querySelector('.button__hover');
+            const span = this.querySelector('.contact__part');
             const { offsetX: x, offsetY: y } = e,
                 { offsetWidth: width, offsetHeight: height } = this,
                 move = 10,
                 xMove = (x / width) * (move * 2) - move,
                 yMove = (y / height) * (move * 2) - move;
             span.style.transform = `translate(${xMove}px, ${yMove}px)`;
-            if (e.type === 'mouseleave') span.style.transform = '';
+            cursor.classList.add('dad-cursor');
+            if (e.type === 'mouseleave') {
+                cursor.classList.remove('dad-cursor');
+                span.style.transform = '';
+            }
         };
         const editCursor = (e) => {
             const { clientX: x, clientY: y } = e;
@@ -70,27 +74,6 @@ if (mixit) {
         window.addEventListener('mousemove', editCursor);
     }
 })();
-
-// gsap.to('.article__img', {
-//     yPercent: -10,
-//     ease: 'none',
-//     scrollTrigger: {
-//         trigger: '.article__img',
-//         start: '500px top',
-//         end: 'bottom top',
-//         scrub: true,
-//         markers: true,
-//         multiple: true,
-//     },
-// });
-//
-// gsap.to('.article__img', {
-//     scrollTrigger: {
-//         scrub: true,
-//     },
-//     y: (i, target) => -ScrollTrigger.maxScroll(window) * target.dataset.speed,
-//     ease: 'none',
-// });
 
 var img = document.querySelectorAll('.article__img-wrapper');
 img.forEach(function (el) {

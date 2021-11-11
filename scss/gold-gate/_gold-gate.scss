@@ -1,0 +1,126 @@
+@import "../gold-gate/case";
+@import "../gold-gate/goal";
+@import "../gold-gate/preview";
+@import "../gold-gate/strategy";
+@import "../gold-gate/presentation";
+@import "../gold-gate/explore";
+
+.goal,
+.preview,
+.strategy,
+.presentation__inner,
+.text-block,
+.example,
+.feature,
+.lead,
+.group,
+.face,
+.expression,
+.client {
+    padding: 128px 0;
+}
+
+.text-block {
+    font-size: 32px;
+    line-height: 44px;
+    color: $bl;
+
+    @extend %jeko-700;
+}
+
+.example {
+    &__img {
+        object-fit: cover;
+    }
+}
+
+.feature {
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__img {
+        height: 100%;
+        object-fit: cover;
+    }
+
+    &__img--middle {
+        padding-top: 160px;
+    }
+
+    &__img--last {
+        padding-top: 480px;
+    }
+}
+
+.lead {
+    &__inner {
+        display: flex;
+        min-height: 100vh;
+    }
+
+    &__descr {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 50%;
+    }
+
+    &__picture {
+        display: flex;
+        align-items: center;
+        padding: 20px 20px 20px 0;
+        width: 50%;
+        background: linear-gradient(321.05deg, #020b17 3.36%, #111e31 94.8%), #f8f8f8;
+    }
+
+    &__text {
+        max-width: 500px;
+        font-size: 56px;
+        line-height: 64px;
+        color: $bl;
+
+        @extend %jeko-700;
+    }
+
+    &__picture--right {
+        justify-content: flex-end;
+        padding: 20px 0 20px 20px;
+    }
+}
+
+.group {
+    &__img {
+        object-fit: cover;
+    }
+}
+
+.face {
+    &__img {
+        object-fit: cover;
+    }
+}
+
+.expression {
+    margin: 0 auto;
+    max-width: 860px;
+
+    &__text {
+        display: block;
+        margin-bottom: 24px;
+        font-size: 32px;
+        line-height: 48px;
+        color: #1f1f1f;
+
+        @extend %jeko-600;
+    }
+
+    &__author {
+        font-size: 18px;
+        line-height: 32px;
+        color: #6b7188;
+
+        @extend %jeko-400;
+    }
+}
