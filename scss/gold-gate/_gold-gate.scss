@@ -18,6 +18,14 @@
 .expression,
 .client {
     padding: 128px 0;
+
+    @include r($xl) {
+        padding: 80px 0;
+    }
+
+    @include r($lg) {
+        padding: 55px 0;
+    }
 }
 
 .text-block {
@@ -25,12 +33,26 @@
     line-height: 44px;
     color: $bl;
 
+    @include r($lg) {
+        font-size: 28px;
+        line-height: 36px;
+    }
+
+    @include r($md) {
+        font-size: 24px;
+        line-height: 30px;
+    }
+
     @extend %jeko-700;
 }
 
 .example {
     &__img {
         object-fit: cover;
+
+        @include r($sm) {
+            height: 400px;
+        }
     }
 }
 
@@ -38,19 +60,75 @@
     &__inner {
         display: flex;
         justify-content: space-between;
+
+        @include r($md) {
+            flex-direction: column;
+            align-items: center;
+        }
     }
 
     &__img {
-        height: 100%;
         object-fit: cover;
+
+        &:not(:last-child) {
+            padding-right: 15px;
+        }
+    }
+
+    &__picture {
+        padding-right: 15px;
+        max-width: 415px;
+
+        @include r($md) {
+            padding-right: 0;
+            max-width: 400px;
+        }
+    }
+
+    &__picture--middle {
+        padding-right: 15px;
+        max-width: 455px;
+
+        @include r($md) {
+            padding-right: 0;
+            max-width: 400px;
+        }
+    }
+
+    &__picture--last {
+        max-width: 400px;
     }
 
     &__img--middle {
         padding-top: 160px;
+
+        @include r($xl) {
+            padding-top: 80px;
+        }
+
+        @include r($lg) {
+            padding-top: 40px;
+        }
+
+        @include r($md) {
+            padding-top: 30px;
+        }
     }
 
     &__img--last {
         padding-top: 480px;
+
+        @include r($xl) {
+            padding-top: 240px;
+        }
+
+        @include r($lg) {
+            padding-top: 150px;
+        }
+
+        @include r($md) {
+            padding-top: 30px;
+        }
     }
 }
 
@@ -58,13 +136,49 @@
     &__inner {
         display: flex;
         min-height: 100vh;
+
+        @include r($md) {
+            flex-direction: column;
+            min-height: 100%;
+        }
     }
 
     &__descr {
         display: flex;
         align-items: center;
         justify-content: center;
+        padding-left: 15px;
         width: 50%;
+
+        @include r($md) {
+            padding-top: 20px;
+            padding-left: 0;
+            width: 100%;
+        }
+    }
+
+    &__descr--mirror {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-right: 15px;
+        width: 50%;
+
+        @include r($md) {
+            padding-right: 0;
+            padding-bottom: 20px;
+            width: 100%;
+        }
+    }
+
+    &__img {
+        @include r($md) {
+            max-width: 400px;
+        }
+
+        @include r($md) {
+            max-width: 280px;
+        }
     }
 
     &__picture {
@@ -73,6 +187,10 @@
         padding: 20px 20px 20px 0;
         width: 50%;
         background: linear-gradient(321.05deg, #020b17 3.36%, #111e31 94.8%), #f8f8f8;
+
+        @include r($md) {
+            width: 100%;
+        }
     }
 
     &__text {
@@ -80,6 +198,23 @@
         font-size: 56px;
         line-height: 64px;
         color: $bl;
+
+        @include r($xl) {
+            font-size: 48px;
+            line-height: 50px;
+        }
+
+        @include r($lg) {
+            font-size: 36px;
+            line-height: 38px;
+        }
+
+        @include r($md) {
+            padding: 0 40px;
+            font-size: 28px;
+            line-height: 30px;
+            text-align: center;
+        }
 
         @extend %jeko-700;
     }
@@ -93,12 +228,20 @@
 .group {
     &__img {
         object-fit: cover;
+
+        @include r($sm) {
+            height: 530px;
+        }
     }
 }
 
 .face {
     &__img {
         object-fit: cover;
+
+        @include r($sm) {
+            height: 400px;
+        }
     }
 }
 
@@ -113,6 +256,17 @@
         line-height: 48px;
         color: #1f1f1f;
 
+        @include r($xl) {
+            font-size: 28px;
+            line-height: 36px;
+        }
+
+        @include r($lg) {
+            margin-bottom: 15px;
+            font-size: 24px;
+            line-height: 30px;
+        }
+
         @extend %jeko-600;
     }
 
@@ -121,6 +275,21 @@
         line-height: 32px;
         color: #6b7188;
 
+        @include r($lg) {
+            font-size: 16px;
+            line-height: 28px;
+        }
+
         @extend %jeko-400;
+    }
+}
+
+.client {
+    &__img {
+        object-fit: cover;
+
+        @include r($sm) {
+            height: 520px;
+        }
     }
 }

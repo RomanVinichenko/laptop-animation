@@ -4,13 +4,25 @@
     &__inner {
         display: flex;
         padding: 300px 0 250px;
+
+        @include r($md) {
+            flex-direction: column;
+        }
     }
 
     &__direct {
         margin-right: 65px;
+        height: 100%;
         font-size: 18px;
         line-height: 32px;
         color: $black-gray;
+
+        @include r($lg) {
+            margin-right: 30px;
+            margin-bottom: 20px;
+            width: 100%;
+            max-width: 100px;
+        }
     }
 
     &__title {
@@ -19,6 +31,22 @@
         line-height: 64px;
         text-decoration: underline 3px;
         text-underline-offset: 3px;
+
+        @include r($lg) {
+            font-size: 42px;
+            line-height: 54px;
+        }
+
+        @include r($md) {
+            margin-bottom: 30px;
+            font-size: 38px;
+            line-height: 48px;
+        }
+
+        @include r($sm) {
+            font-size: 32px;
+            line-height: 36px;
+        }
     }
 
     &__block {

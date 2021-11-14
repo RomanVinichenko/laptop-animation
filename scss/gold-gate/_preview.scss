@@ -3,8 +3,21 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        padding: 80px 50px;
         min-height: 100vh;
         background-color: #fcf9f5;
+
+        @include r($xl) {
+            min-height: 100%;
+        }
+
+        @include r($md) {
+            padding: 70px 40px;
+        }
+
+        @include r($sm) {
+            padding: 40px 20px;
+        }
     }
 }
 
