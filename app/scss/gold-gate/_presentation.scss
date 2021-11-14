@@ -2,6 +2,10 @@
     &__inner {
         display: flex;
         justify-content: space-between;
+
+        @include r($sm) {
+            flex-direction: column;
+        }
     }
 
     &__picture {
@@ -9,11 +13,26 @@
     }
 
     &__img {
-        max-width: 576px;
         object-fit: cover;
     }
 
     &__picture--right {
         padding-top: 400px;
+
+        @include r($xl) {
+            padding-top: 200px;
+        }
+
+        @include r($lg) {
+            padding-top: 100px;
+        }
+
+        @include r($sm) {
+            padding-top: 50px;
+        }
+    }
+
+    &__space {
+        width: 15px;
     }
 }
